@@ -1,25 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
+import "./Registration.css";
 
 function Registration() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
 
     const registrationInformation = {
       name,
       email,
-      password
+      password,
     };
 
     console.log(registrationInformation);
 
     // Reset the form state.
-    setName('');
-    setEmail('');
-    setPassword('');
+    setName("");
+    setEmail("");
+    setPassword("");
   };
 
   return (
@@ -27,36 +28,36 @@ function Registration() {
       <h2>Registration</h2>
       <form onSubmit={onSubmit}>
         <div>
-          <label htmlFor='name'>Name:</label>
+          <label htmlFor="name">Name:</label>
           <input
-            id='name'
-            type='text'
-            onChange={e => setName(e.target.value)}
+            id="name"
+            type="text"
+            onChange={(e) => setName(e.target.value)}
             value={name}
           />
         </div>
         <div>
-          <label htmlFor='email'>Email:</label>
-          <input 
-            id='email'
-            type='text'
-            onChange={e => setEmail(e.target.value)}
+          <label htmlFor="email">Email:</label>
+          <input
+            id="email"
+            type="text"
+            onChange={(e) => setEmail(e.target.value)}
             value={email}
           />
         </div>
         <div>
-          <label htmlFor='phone'>Password:</label>
+          <label htmlFor="phone">Password:</label>
           <input
-            id='phone'
-            type='text'
-            onChange={e => setPassword(e.target.value)}
+            id="phone"
+            type="text"
+            onChange={(e) => setPassword(e.target.value)}
             value={password}
           />
         </div>
         <button>Submit</button>
       </form>
     </div>
-  )
+  );
 }
 
-export default Registration
+export default Registration;

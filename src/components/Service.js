@@ -1,3 +1,4 @@
+import "./styles.css";
 const Service = ({ icon, title, text, id, onDelete }) => {
   const handleDelete = () => {
     onDelete(id); // Pass the item's ID to the parent component for deletion
