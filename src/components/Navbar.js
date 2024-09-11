@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import PageLinks from "./PageLinks";
 import SocialLinks from "./SocialLinks";
@@ -14,6 +15,9 @@ const Navbar = () => {
         </div>
         <PageLinks parentClass="nav-links" itemClass="nav-link" />
         <SocialLinks parentClass="nav-icons" itemClass="nav-icon" />
+        <Link to="/registration">
+          Registration
+        </Link>
       </div>
     </nav>
   );
