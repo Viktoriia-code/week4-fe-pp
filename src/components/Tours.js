@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { tours } from "../data";
 import Tour from "./Tour.js";
 
 const Tours = () => {
+  const [toursData, setToursData] = useState(tours);
+
   return (
     <section className="section" id="tour">
       <div className="section-title">
@@ -10,7 +13,7 @@ const Tours = () => {
         </h2>
       </div>
       <div className="section-center featured-center">
-        {tours.map((tour) => {
+        {toursData.map((tour) => {
           return <Tour {...tour} key={tour.id}/>
         })}
       </div>
