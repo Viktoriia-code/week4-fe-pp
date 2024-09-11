@@ -24,7 +24,7 @@ function Registration() {
   };
 
   return (
-    <div>
+    <div className="registration">
       <h2>Registration</h2>
       <form onSubmit={onSubmit}>
         <div>
